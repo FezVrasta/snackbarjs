@@ -1,0 +1,20 @@
+// out: snackbar.css
+#snackbar-container {
+    position: fixed;
+    left: 20px;
+    bottom: 0;
+    z-index: 99999;
+}
+.snackbar {
+    overflow: hidden;
+    clear: both;
+    min-width: 288px;
+    max-width: 568px;
+    cursor: pointer;
+    opacity: 0;
+}
+
+.snackbar.snackbar-opened {
+    height: auto;
+    opacity: 1;
+}
