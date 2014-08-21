@@ -6,6 +6,10 @@ Use it is easy as write:
 
     <span data-toggle=snackbar data-content="This is my awesome snackbar!">Click me</span>
 
+or
+
+    $.snackbar({content: "This is my awesome snackbar!"});
+
 ## Options
 
 There are some options to customize SnackbarJS look and beahvior:
