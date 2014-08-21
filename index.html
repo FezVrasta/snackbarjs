@@ -9,18 +9,27 @@
         <link rel="stylesheet" href="dist/snackbar.min.css">
         <link rel="stylesheet" href="themes-css/material.css">
         <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
-        <!--[if lt IE 9]>
-        <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
-        <![endif]-->
+        <!--[if lt IE 9]><script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
     </head>
     <body>
         <a href="https://github.com/FezVrasta/snackbarjs"><img style="position: absolute; top: 0; right: 0; border: 0;" src="https://camo.githubusercontent.com/38ef81f8aca64bb9a64448d0d70f1308ef5341ab/68747470733a2f2f73332e616d617a6f6e6177732e636f6d2f6769746875622f726962626f6e732f666f726b6d655f72696768745f6461726b626c75655f3132313632312e706e67" alt="Fork me on GitHub" data-canonical-src="https://s3.amazonaws.com/github/ribbons/forkme_right_darkblue_121621.png"></a>
         <div class="container">
-            <h1>SnackbarJS</h1>
-            <p>Create snackbars and toasts with ease.</p>
-            <span class="btn btn-primary" data-toggle="snackbar" data-content="This is a snackbar! Click to dismiss me.">Show or hide a snackbar</span>
-            <span class="btn btn-primary" data-toggle="snackbar" data-content="This is a snackbar! Click to dismiss me.">Show or hide a toast</span>
-            <span class="btn btn-primary" onclick="javascript:$.snackbar({content: 'This is a JS generated snackbar, it rocks!'});">Create and show a snackbar.</span>
+            <div class="row">
+                <div class="col-lg-12">
+                    <h1>SnackbarJS</h1>
+                    <p>Create snackbars and toasts with ease.</p>
+                    <br>
+                    <p>SnackbarJS is a lightweight and jQuery powered plugin made to work in Bootstrap style, just like the Bootstrap tooltips work.<br>
+                       Use it is easy as write:
+
+                        <pre><code><span data-toggle=snackbar data-content="This is my awesome snackbar!"></span></code></pre>
+                    </p>
+                    <span class="btn btn-primary" data-toggle="snackbar" data-content="This is a snackbar! Click to dismiss me.">Show or hide a snackbar</span>
+                    <span class="btn btn-primary" data-toggle="snackbar" data-content="This is a snackbar! Click to dismiss me.">Show or hide a toast</span>
+                    <span class="btn btn-primary" onclick="javascript:$.snackbar({content: 'This is a JS generated snackbar, it rocks!'});">Create and show a snackbar.</span>
+                </div>
+            </div>
+
         </div>
         <script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
         <script src="dist/snackbar.min.js"></script>
