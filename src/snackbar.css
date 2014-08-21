@@ -17,3 +17,17 @@
   height: auto;
   opacity: 1;
 }
+@media (max-width: 767px) {
+  #snackbar-container {
+    left: 0px !important;
+    right: 0px;
+    width: 100%;
+  }
+  #snackbar-container .snackbar {
+    min-width: 100%;
+  }
+  #snackbar-container [class="snackbar snackbar-opened"] {
+    border-radius: 0;
+    margin-bottom: 0;
+  }
+}
