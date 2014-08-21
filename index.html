@@ -36,25 +36,30 @@
 
 $.snackbar(options);</code></pre>
                     <br>
-                        <span class="alert alert-info shadow-z-2"><b>Tip</b>: SnackbarJS returns always a jQuery element which corresponds to the snackbar.</span>
+                    <span class="alert alert-info shadow-z-2"><b>Tip</b>: SnackbarJS returns always a jQuery element which corresponds to the snackbar.</span>
 
-                    </p>
+                </p>
                 <br>
                 <br>
-                    <h2>Demo</h2>
-                    <p>To see SnackbarJS in action click the buttons below:<br>
+                <h2>Demo</h2>
+                <p>To see SnackbarJS in action click the buttons below:<br>
 
-                        <span class="btn btn-material-deeppurple" data-toggle="snackbar" data-content="This is a snackbar! Click to dismiss me." data-timeout=0>Show or hide a snackbar</span>
-                        <span class="btn btn-material-teal" data-toggle="snackbar" data-style="toast" data-content="This is a toast! Click to dismiss me." data-timeout=0>Show or hide a toast</span>
-                        <span class="btn btn-material-deeppurple" onclick="javascript:$.snackbar({content: 'This is a JS generated snackbar, it rocks!'});">Create and show a snackbar.</span>
-                        <span class="btn btn-material-teal" onclick="javascript:$.snackbar({content: 'This is a JS generated snackbar, it rocks!', style: 'toast'});">Create and show a toast.</span>
+                    <span class="btn btn-material-deeppurple" data-toggle="snackbar" data-content="This is a snackbar! Click to dismiss me." data-timeout=0>Show or hide a snackbar</span>
+                    <span class="btn btn-material-teal" data-toggle="snackbar" data-style="toast" data-content="This is a toast! Click to dismiss me." data-timeout=0>Show or hide a toast</span>
+                    <span class="btn btn-material-deeppurple" onclick="javascript:$.snackbar({content: 'This is a JS generated snackbar, it rocks!'});">Create and show a snackbar.</span>
+                    <span class="btn btn-material-teal" onclick="javascript:$.snackbar({content: 'This is a JS generated snackbar, it rocks!', style: 'toast'});">Create and show a toast.</span>
 
-                    </p>
-                </div>
+                </p>
             </div>
-
         </div>
-        <script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
-        <script src="dist/snackbar.min.js"></script>
-    </body>
+
+    </div>
+    <script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
+    <script src="dist/snackbar.min.js"></script>
+    <script>
+        $(function() {
+            $.snackbar({content: "Hey! Welcome to SnackbarJS demo, if you have any question checkout the <a href='https://github.com/FezVrasta/snackbarjs/issues'>issues section</a> of GitHub.", timeout: 10000});
+        });
+    </script>
+</body>
 </html>
