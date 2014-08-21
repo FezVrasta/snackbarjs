@@ -26,6 +26,9 @@
   #snackbar-container .snackbar {
     min-width: 100%;
   }
+  #snackbar-container .snackbar.toast ~ [class="snackbar snackbar-opened"] {
+    margin-bottom: 20px;
+  }
   #snackbar-container [class="snackbar snackbar-opened"] {
     border-radius: 0;
     margin-bottom: 0;
