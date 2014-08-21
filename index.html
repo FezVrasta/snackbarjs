@@ -14,7 +14,7 @@
     </head>
     <body>
         <a href="https://github.com/FezVrasta/snackbarjs"><img style="position: absolute; top: 0; right: 0; border: 0;" src="https://camo.githubusercontent.com/38ef81f8aca64bb9a64448d0d70f1308ef5341ab/68747470733a2f2f73332e616d617a6f6e6177732e636f6d2f6769746875622f726962626f6e732f666f726b6d655f72696768745f6461726b626c75655f3132313632312e706e67" alt="Fork me on GitHub" data-canonical-src="https://s3.amazonaws.com/github/ribbons/forkme_right_darkblue_121621.png"></a>
-        <div class="container">
+        <div class="container" style="margin-bottom: 300px;">
             <div class="row">
                 <div class="col-lg-12">
                     <h1>SnackbarJS</h1>
@@ -25,15 +25,31 @@
 
                         <code class="well" style="display: block; margin: 20px 0;">&lt;span data-toggle=snackbar data-content="This is my awesome snackbar!"&gt;Click me&lt;/span&gt;</code>
                     </p>
+                    <br>
+                    <h2>Options</h2>
+                    <p>There are some options to customize SnackbarJS look and beahvior:<br>
+                        <pre class="well" style="display: block; margin: 20px 0;"><code>var options =  {
+    content: "Some text", // text of the snackbar
+    style: "toast", // add a custom class to your snackbar
+    timeout: 100 // time in milliseconds after the snackbar autohides, 0 is disabled
+}
+
+$.snackbar(options);</code></pre>
+                    <br>
+                        <span class="alert alert-info shadow-z-2"><b>Tip</b>: SnackbarJS returns always a jQuery element which corresponds to the snackbar.</span>
+
+                    </p>
+                <br>
+                <br>
                     <h2>Demo</h2>
                     <p>To see SnackbarJS in action click the buttons below:<br>
 
-                        <span class="btn btn-primary" data-toggle="snackbar" data-content="This is a snackbar! Click to dismiss me.">Show or hide a snackbar</span>
-                        <span class="btn btn-primary" data-toggle="snackbar" data-content="This is a snackbar! Click to dismiss me.">Show or hide a toast</span>
-                        <span class="btn btn-primary" onclick="javascript:$.snackbar({content: 'This is a JS generated snackbar, it rocks!'});">Create and show a snackbar.</span>
+                        <span class="btn btn-material-deeppurple" data-toggle="snackbar" data-content="This is a snackbar! Click to dismiss me." data-timeout=0>Show or hide a snackbar</span>
+                        <span class="btn btn-material-teal" data-toggle="snackbar" data-style="toast" data-content="This is a toast! Click to dismiss me." data-timeout=0>Show or hide a toast</span>
+                        <span class="btn btn-material-deeppurple" onclick="javascript:$.snackbar({content: 'This is a JS generated snackbar, it rocks!'});">Create and show a snackbar.</span>
+                        <span class="btn btn-material-teal" onclick="javascript:$.snackbar({content: 'This is a JS generated snackbar, it rocks!', style: 'toast'});">Create and show a toast.</span>
 
                     </p>
-
                 </div>
             </div>
 
