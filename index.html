@@ -36,7 +36,21 @@
 
 $.snackbar(options);</code></pre>
                     <br>
-                    <span class="alert alert-info shadow-z-2"><b>Tip</b>: SnackbarJS returns always a jQuery element which corresponds to the snackbar.</span>
+                    <div class="alert alert-info shadow-z-2"><b>Tip</b>: SnackbarJS returns always a jQuery element which corresponds to the snackbar DOM element, you can use it to get the ID of it, or do any kind of stuff with it.</div>
+
+                </p>
+                <br>
+                <br>
+                <h2>Interact with snackbars</h2>
+                <p>
+                    Once you have created a snackbar you can show, hide or toggle it with:
+                    <code class="well" style="display: block; margin: 20px 0;">
+                        $("#snackbarid").snackbar("show");<br>
+                        $("#snackbarid").snackbar("hide");<br>
+                        $("#snackbarid").snackbar("toggle");
+                    </code>
+                    <code>#snackbarid</code> can be both the button with the <code>data-toggle=snackbar</code> attribute or the snackbar element.<br>
+                    Call it on a not-existing snackbar will create it before the specificed action.
 
                 </p>
                 <br>
