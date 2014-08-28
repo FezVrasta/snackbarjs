@@ -1,0 +1,25 @@
+{
+  "name": "SnackbarJS",
+  "version": "0.1.0",
+  "homepage": "https://github.com/FezVrasta/snackbarjs",
+  "description": "Create snackbars and toasts with ease.",
+  "main": "dist/snackbar.min.js",
+  "keywords": [
+    "snackbar",
+    "toasts",
+    "material",
+    "design",
+    "bootstrap"
+  ],
+  "authors": [
+    "FezVrasta (Federico Zivolo) <fez@tekhy.net>"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}
