@@ -12,7 +12,7 @@ Include it with:
         <script src=snackbar.min.js></script>
     </body>
 
-Use it is easy as write:
+Using it is as easy as writing:
 
     <span data-toggle=snackbar data-content="This is my awesome snackbar!">Click me</span>
 
@@ -22,7 +22,7 @@ or
 
 ## Options
 
-There are some options to customize SnackbarJS look and beahvior:
+Following options are supported to customize SnackbarJS look and beahvior:
 
     var options =  {
         content: "Some text", // text of the snackbar
@@ -32,7 +32,7 @@ There are some options to customize SnackbarJS look and beahvior:
 
     $.snackbar(options);
 
-**Tip**: SnackbarJS returns always a jQuery element which corresponds to the snackbar DOM element, you can use it to get the ID of it, or do any kind of stuff with it.
+**Tip**: SnackbarJS returns always a jQuery element which corresponds to the snackbar DOM element, you can use it to get the ID of the element, and then do other operations with it.
 
 ## Interact with snackbars
 
@@ -43,7 +43,7 @@ Once you have created a snackbar you can show, hide or toggle it with:
     $("#snackbarid").snackbar("toggle");
     
 `#snackbarid` can be both the button with the data-toggle=snackbar attribute or the snackbar element.  
-Call it on a not-existing snackbar will create it before the specificed action.
+Calling it on a non-existing snackbar will create it before executing the specificed action.
 
 ## Demo
 
