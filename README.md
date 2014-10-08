@@ -5,7 +5,7 @@ SnackbarJS is a lightweight and jQuery powered plugin made to work in Bootstrap 
 Include it with:
 
     <head>
-        <!-- core CSS of SnackbarJS, fint it in /dist -->
+        <!-- core CSS of SnackbarJS, find it in /dist -->
         <link href=snackbar.min.css rel=stylesheet>
         <!-- the default theme of SnackbarJS, find it in /themes-css -->
         <link href=material.css rel=stylesheet>
