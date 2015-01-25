@@ -61,4 +61,5 @@ var jquery = require('jquery');
 require('snackbarjs')(jquery);
 
 console.log('Is Snackbar loaded?');
-console.log(typeof jquery.snackbar === 'object');
+console.log(typeof jquery.snackbar === 'function');
+```
