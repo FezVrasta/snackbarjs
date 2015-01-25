@@ -76,7 +76,7 @@ module.exports = function(grunt) {
   grunt.loadNpmTasks("grunt-contrib-less");
 
   grunt.registerTask("test", ["jshint"]);
-  grunt.registerTask("dist", ["less:snackbar", "cssmin:snackbar", "uglify:snackbar"]);
+  grunt.registerTask("dist", ["less:snackbar", "cssmin:snackbar", "uglify:snackbar", "commonjs"]);
   grunt.registerTask("themes", ["less:themes"]);
 
 };
