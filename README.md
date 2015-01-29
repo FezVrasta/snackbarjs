@@ -52,3 +52,14 @@ Calling it on a non-existing snackbar will create it before executing the specif
 ## Demo
 
 To see SnackbarJS in action visit [the demo page](http://fezvrasta.github.io/snackbarjs/).
+
+##Browserify
+This library is [CommonJS](http://www.commonjs.org/) compatible, so you can use it this way:
+
+```javascript
+var jquery = require('jquery');
+require('snackbarjs')(jquery);
+
+console.log('Is Snackbar loaded?');
+console.log(typeof jquery.snackbar === 'function');
+```
