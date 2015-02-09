@@ -41,11 +41,15 @@
                 $snackbar.attr("class", "snackbar");
             }
 
+            options.htmlAllowed = isset(options.htmlAllowed) ? options.htmlAllowed : false;
+
             options.timeout = (isset(options.timeout)) ? options.timeout : 3000;
+
+            options.content = (options.htmlAllowed) ? options.content : $("<p>" + options.content + "</p>").text();
 
             if (isset(options.content)) {
                 if ($snackbar.find(".snackbar-content").length) {
-                    $snackbar.find(".snackbar-content").text(options.content);
+                    $snackbar.find(".snackbar-content").html(options.content);
                 } else {
                     $snackbar.prepend("<span class=snackbar-content>" + options.content + "</span>");
                 }
@@ -107,7 +111,8 @@
                 options = {
                     content: $(this).attr("data-content"),
                     style: $(this).attr("data-style"),
-                    timeout: $(this).attr("data-timeout")
+                    timeout: $(this).attr("data-timeout"),
+                    htmlAllowed: $(this).attr("data-html-allowed")
                 };
             }
 
