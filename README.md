@@ -64,3 +64,18 @@ Calling it on a non-existing snackbar will create it before executing the specif
 ## Demo
 
 To see SnackbarJS in action visit [the demo page](http://fezvrasta.github.io/snackbarjs/).
+
+Browserify
+----------
+This library is [UMD](https://github.com/umdjs/umd) compatible, so you can use it in this way:
+
+```javascript
+var jquery = require('jquery');
+require('snackbarjs');
+
+var options =  {
+    ...
+}
+
+jquery.snackbar(options);
+```
