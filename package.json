@@ -2,7 +2,7 @@
   "name": "snackbarjs",
   "version": "1.0.0",
   "description": "SnackbarJS is a lightweight and jQuery powered plugin made to work in Bootstrap style, just like the Bootstrap tooltips work.",
-  "main": "index.js",
+  "main": "src/snackbar",
   "repository": {
     "type": "git",
     "url": "https://github.com/FezVrasta/snackbarjs.git"
