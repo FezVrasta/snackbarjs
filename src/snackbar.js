@@ -37,36 +37,57 @@
 
         if (isset(options) && options === Object(options)) {
             var $snackbar;
+			
+			var snackbarNew = false;
 
             if (!isset(options.id)) {
                 $snackbar = $("<div/>").attr("id", "snackbar" + Date.now()).attr("class", "snackbar");
+				snackbarNew = true;
             } else {
-                $snackbar = $("#" + options.id);
+                if ($("#" + options.id).length) {
+					$snackbar = $("#" + options.id);
+				} else {
+					$snackbar = $("<div/>").attr("id", "" + options.id).attr("class", "snackbar");
+					snackbarNew = true;
+				}
             }
 
             var snackbarStatus = $snackbar.hasClass("snackbar-opened");
-
+			
             if (isset(options.style)) {
-                $snackbar.attr("class", "snackbar " + options.style);
+				if (snackbarStatus)
+					$snackbar.attr("class", "snackbar snackbar-opened " + options.style);
+				else
+					$snackbar.attr("class", "snackbar " + options.style);
+				$snackbar.attr("data-style", options.style);
             } else {
-                $snackbar.attr("class", "snackbar");
+                if (snackbarStatus)
+					$snackbar.attr("class", "snackbar snackbar-opened");
+				else
+					$snackbar.attr("class", "snackbar");
             }
 
             options.htmlAllowed = isset(options.htmlAllowed) ? options.htmlAllowed : false;
 
             options.timeout = (isset(options.timeout)) ? options.timeout : 3000;
+			$snackbar.attr("data-timeout", options.timeout);
 
             options.content = (options.htmlAllowed) ? options.content : $("<p>" + options.content + "</p>").text();
-
+			
+			if (isset(options.htmlAllowed)) {
+				$snackbar.attr("data-html-allowed", options.htmlAllowed);
+			}
+			
             if (isset(options.content)) {
                 if ($snackbar.find(".snackbar-content").length) {
                     $snackbar.find(".snackbar-content").html(options.content);
                 } else {
                     $snackbar.prepend("<span class=snackbar-content>" + options.content + "</span>");
                 }
+				$snackbar.attr("data-content", options.content);
             }
 
-            if (!isset(options.id)) {
+            if (snackbarNew) {
                 $snackbar.appendTo("#snackbar-container");
             } else {
                 $snackbar.insertAfter("#snackbar-container .snackbar:last-child");
@@ -142,7 +163,13 @@
 
         } else {
 
-            options.id = this.attr("id");
+            options = {
+					id: this.attr("id"),
+                    content: $(this).attr("data-content"),
+                    style: $(this).attr("data-style"),
+                    timeout: $(this).attr("data-timeout"),
+                    htmlAllowed: $(this).attr("data-html-allowed")
+                };
             if(action === "show" || action === "hide" || action == "toggle") {
                 options.action = action;
             }
