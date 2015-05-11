@@ -100,38 +100,38 @@
     $.fn.snackbar = function(action) {
 
         var options = {};
+        if (typeof action !== "undefined"){
+            if (!this.hasClass("snackbar")) {
 
-        if (!this.hasClass("snackbar")) {
+                if (!isset(action) || action === "show" || action === "hide" || action == "toggle") {
+                    options = {
+                        content: $(this).attr("data-content"),
+                        style: $(this).attr("data-style"),
+                        timeout: $(this).attr("data-timeout")
+                    };
+                }
 
-            if (!isset(action) || action === "show" || action === "hide" || action == "toggle") {
-                options = {
-                    content: $(this).attr("data-content"),
-                    style: $(this).attr("data-style"),
-                    timeout: $(this).attr("data-timeout")
-                };
-            }
+                if (isset(action)) {
+                    options.id = this.attr("data-snackbar-id");
 
-            if (isset(action)) {
-                options.id = this.attr("data-snackbar-id");
+                    if(action === "show" || action === "hide" || action == "toggle") {
+                        options.action = action;
+                    }
+                }
 
+                var $snackbar = $.snackbar(options);
+                this.attr("data-snackbar-id", $snackbar.attr("id"));
+
+                return $snackbar;
+
+            } else {
+
+                options.id = this.attr("id");
                 if(action === "show" || action === "hide" || action == "toggle") {
                     options.action = action;
                 }
+                return $.snackbar(options);
             }
-
-            var $snackbar = $.snackbar(options);
-            this.attr("data-snackbar-id", $snackbar.attr("id"));
-
-            return $snackbar;
-
-        } else {
-
-            options.id = this.attr("id");
-            if(action === "show" || action === "hide" || action == "toggle") {
-                options.action = action;
-            }
-            return $.snackbar(options);
         }
-
     };
 })( jQuery );
