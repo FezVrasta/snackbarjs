@@ -115,7 +115,9 @@
     $.fn.snackbar = function(action) {
 
         var options = {};
-
+        if (typeof action ==='undefined'){
+            return false;
+        }
         if (!this.hasClass("snackbar")) {
 
             if (!isset(action) || action === "show" || action === "hide" || action == "toggle") {
