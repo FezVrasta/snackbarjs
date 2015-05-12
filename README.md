@@ -31,7 +31,7 @@ Following options are supported to customize SnackbarJS look and beahvior:
     var options =  {
         content: "Some text", // text of the snackbar
         style: "toast", // add a custom class to your snackbar
-        timeout: 100 // time in milliseconds after the snackbar autohides, 0 is disabled,
+        timeout: 100, // time in milliseconds after the snackbar autohides, 0 is disabled,
         htmlAllowed: true // allows HTML as content value
     }
 
