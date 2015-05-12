@@ -26,7 +26,7 @@ or
 
 ## Options
 
-Following options are supported to customize SnackbarJS look and beahvior:
+Following options are supported to customize SnackbarJS look and behavior:
 
     var options =  {
         content: "Some text", // text of the snackbar
@@ -48,11 +48,11 @@ Or in HTML:
     </span>
 
 
-**Tip**: SnackbarJS returns always a jQuery element which corresponds to the snackbar DOM element, you can use it to get the ID of the element, and then do other operations with it.
+**Tip**: SnackbarJS always returns a jQuery element which corresponds to the snackbar DOM element, you can use it to get the ID of the element, and then do other operations with it.
 
 ## Interact with snackbars
 
-Once you have created a snackbar you can show, hide or toggle it with:
+Once you a snackbar is created, it can be hidden or toggled with:
 
     $("#snackbarid").snackbar("show");
     $("#snackbarid").snackbar("hide");
