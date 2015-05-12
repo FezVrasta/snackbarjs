@@ -52,7 +52,7 @@ Or in HTML:
 
 ## Interact with snackbars
 
-Once you a snackbar is created, it can be hidden or toggled with:
+Once a snackbar is created, it can be hidden or toggled with:
 
     $("#snackbarid").snackbar("show");
     $("#snackbarid").snackbar("hide");
