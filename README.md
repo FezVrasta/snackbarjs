@@ -1,8 +1,8 @@
 # SnackbarJS
 
-SnackbarJS is a lightweight and jQuery powered plugin made to work in Bootstrap style, just like the Bootstrap tooltips work.
+SnackbarJS is a lightweight and jQuery powered plugin made to work just like the tooltips in Bootstrap.
 
-Include it with:
+Include it in your html page with:
 
     <head>
         <!-- core CSS of SnackbarJS, find it in /dist -->
@@ -16,17 +16,17 @@ Include it with:
         <script src=snackbar.min.js></script>
     </body>
 
-Using it is as easy as writing:
+To use it in HTML:
 
     <span data-toggle=snackbar data-content="This is my awesome snackbar!">Click me</span>
 
-or
+or with javascript:
 
     $.snackbar({content: "This is my awesome snackbar!"});
 
 ## Options
 
-Following options are supported to customize SnackbarJS look and beahvior:
+Following options are supported to customize look and behaviour:
 
     var options =  {
         content: "Some text", // text of the snackbar
