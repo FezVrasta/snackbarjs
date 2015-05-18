@@ -113,7 +113,9 @@
     };
 
     $.fn.snackbar = function(action) {
-
+        if (typeof action==='undefined'){
+            return;
+        }
         var options = {};
 
         if (!this.hasClass("snackbar")) {
