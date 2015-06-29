@@ -37,7 +37,7 @@
 
         if (isset(options) && options === Object(options)) {
             var $snackbar;
-			
+
 			var snackbarNew = false;
 
             if (!isset(options.id)) {
@@ -53,18 +53,20 @@
             }
 
             var snackbarStatus = $snackbar.hasClass("snackbar-opened");
-			
+
             if (isset(options.style)) {
-				if (snackbarStatus)
+				if (snackbarStatus) {
 					$snackbar.attr("class", "snackbar snackbar-opened " + options.style);
-				else
+                } else {
 					$snackbar.attr("class", "snackbar " + options.style);
+                }
 				$snackbar.attr("data-style", options.style);
             } else {
-                if (snackbarStatus)
+                if (snackbarStatus) {
 					$snackbar.attr("class", "snackbar snackbar-opened");
-				else
+                } else {
 					$snackbar.attr("class", "snackbar");
+                }
             }
 
             options.htmlAllowed = isset(options.htmlAllowed) ? options.htmlAllowed : false;
@@ -73,11 +75,11 @@
 			$snackbar.attr("data-timeout", options.timeout);
 
             options.content = (options.htmlAllowed) ? options.content : $("<p>" + options.content + "</p>").text();
-			
+
 			if (isset(options.htmlAllowed)) {
 				$snackbar.attr("data-html-allowed", options.htmlAllowed);
 			}
-			
+
             if (isset(options.content)) {
                 if ($snackbar.find(".snackbar-content").length) {
                     $snackbar.find(".snackbar-content").html(options.content);
