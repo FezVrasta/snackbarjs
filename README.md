@@ -40,7 +40,7 @@ Following options are supported to customize look and behaviour:
 Or in HTML:
 
     <span data-toggle=snackbar
-          data-content="TSome text"
+          data-content="Some text"
           data-style="toast"
           data-timeout="100"
           data-html-allowed="true">
