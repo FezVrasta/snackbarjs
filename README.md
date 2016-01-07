@@ -50,6 +50,7 @@ Or in HTML:
 
 
 **Tip**: SnackbarJS returns always a jQuery element which corresponds to the snackbar DOM element, you can use it to get the ID of the element, and then do other operations with it.
+
 **Heads up!**: The <code>onClose</code> callback is not available using the HTML syntax.
 
 ## Interact with snackbars
