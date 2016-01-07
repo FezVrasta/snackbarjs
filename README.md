@@ -32,7 +32,8 @@ Following options are supported to customize look and behaviour:
         content: "Some text", // text of the snackbar
         style: "toast", // add a custom class to your snackbar
         timeout: 100, // time in milliseconds after the snackbar autohides, 0 is disabled
-        htmlAllowed: true // allows HTML as content value
+        htmlAllowed: true, // allows HTML as content value
+        onClose: function(){ } // callback called when the snackbar gets closed.
     }
 
     $.snackbar(options);
@@ -49,6 +50,8 @@ Or in HTML:
 
 
 **Tip**: SnackbarJS returns always a jQuery element which corresponds to the snackbar DOM element, you can use it to get the ID of the element, and then do other operations with it.
+
+**Heads up!**: The <code>onClose</code> callback is not available using the HTML syntax.
 
 ## Interact with snackbars
 
