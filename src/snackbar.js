@@ -148,6 +148,7 @@
                         $snackbar.addClass("snackbar-opened");
                     } else if (isset(options.action) && options.action == "hide") {
                         $snackbar.removeClass("snackbar-opened");
+                        $snackbar.hide();
                         events.emit(options.id);
                         events.off(options.id);
                     }
