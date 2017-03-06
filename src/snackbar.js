@@ -61,6 +61,8 @@
 
 			var snackbarNew = false;
 
+            options = Object.assign({}, $.snackbar.defaults, options)
+
             if (!isset(options.id)) {
                 options.id = "snackbar" + Date.now();
                 $snackbar = $("<div/>").attr("id", options.id).attr("class", "snackbar");
@@ -162,6 +164,9 @@
             return false;
         }
     };
+
+    // Global defaults that the user can set
+    $.snackbar.defaults = {};
 
     $.fn.snackbar = function(action) {
         if (typeof action==='undefined'){
