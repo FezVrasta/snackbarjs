@@ -4,19 +4,16 @@ function Timer(callback, delay) {
 	var args = arguments;
 	var self = this;
 	var timer, start;
-
 	this.pause = function () {
 		clearTimeout(timer);
 		delay -= new Date() - start;
 	};
-
 	this.resume = function () {
 		start = new Date();
 		timer = setTimeout(function () {
 			callback.apply(self, Array.prototype.slice.call(args, 2, args.length));
 		}, delay);
 	};
-
 	this.resume();
 }
 
@@ -31,9 +28,9 @@ function Timer(callback, delay) {
 		// Browser globals
 		factory(jQuery);
 	}
-}(function ($) {
+}(function( $ ){
 
-	$(document).ready(function () {
+	$(document).ready(function() {
 		$("body").append("<div id=snackbar-container/>");
 	});
 
@@ -52,14 +49,14 @@ function Timer(callback, delay) {
 			this.events[eventName] = this.events[eventName] || [];
 			this.events[eventName].push(fn);
 		},
-		off: function (eventName) {
+		off: function(eventName) {
 			if (this.events[eventName]) {
 				delete this.events[eventName];
 			}
 		},
 		emit: function (eventName, data) {
 			if (this.events[eventName]) {
-				this.events[eventName].forEach(function (fn) {
+				this.events[eventName].forEach(function(fn) {
 					fn(data);
 				});
 			}
@@ -67,14 +64,14 @@ function Timer(callback, delay) {
 	};
 
 	$(document)
-		.on("click", "[data-toggle=snackbar]", function () {
+		.on("click", "[data-toggle=snackbar]", function() {
 			$(this).snackbar("toggle");
 		})
-		.on("click", "#snackbar-container .snackbar", function () {
+		.on("click", "#snackbar-container .snackbar", function() {
 			$(this).snackbar("hide");
 		});
 
-	$.snackbar = function (options) {
+	$.snackbar = function(options) {
 
 		if (isset(options) && options === Object(options)) {
 			var $snackbar;
@@ -152,7 +149,7 @@ function Timer(callback, delay) {
 
 			var animationId1 = Date.now();
 			$snackbar.data("animationId1", animationId1);
-			setTimeout(function () {
+			setTimeout(function() {
 				if ($snackbar.data("animationId1") === animationId1) {
 					if (!isset(options.action) || options.action == "show") {
 						$snackbar.addClass("snackbar-opened");
@@ -177,7 +174,7 @@ function Timer(callback, delay) {
 					}
 				}, options.timeout);
 			}
-			
+
 			if (options.pauseOnHover) {
 				$snackbar.hover(function () {
 					timer.pause();
@@ -196,8 +193,8 @@ function Timer(callback, delay) {
 	// Global defaults that the user can set
 	$.snackbar.defaults = {};
 
-	$.fn.snackbar = function (action) {
-		if (typeof action === 'undefined') {
+	$.fn.snackbar = function(action) {
+		if (typeof action==='undefined'){
 			return;
 		}
 		var options = {};
@@ -217,7 +214,7 @@ function Timer(callback, delay) {
 			if (isset(action)) {
 				options.id = this.attr("data-snackbar-id");
 
-				if (action === "show" || action === "hide" || action == "toggle") {
+				if(action === "show" || action === "hide" || action == "toggle") {
 					options.action = action;
 				}
 			}
@@ -237,7 +234,7 @@ function Timer(callback, delay) {
 				htmlAllowed: $(this).attr("data-html-allowed"),
 				pauseOnHover: $(this).attr("data-pause-hover")
 			};
-			if (action === "show" || action === "hide" || action == "toggle") {
+			if(action === "show" || action === "hide" || action == "toggle") {
 				options.action = action;
 			}
 			return $.snackbar(options);
