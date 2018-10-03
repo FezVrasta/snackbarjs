@@ -33,7 +33,8 @@ Following options are supported to customize look and behaviour:
         style: "toast", // add a custom class to your snackbar
         timeout: 100, // time in milliseconds after the snackbar autohides, 0 is disabled
         htmlAllowed: true, // allows HTML as content value
-        onClose: function(){ } // callback called when the snackbar gets closed.
+        onClose: function(){ }, // callback called when the snackbar gets closed.
+        pauseOnHover: true // whether hovering should pause the timeout
     }
 
     $.snackbar(options);
@@ -44,7 +45,8 @@ Or in HTML:
           data-content="Some text"
           data-style="toast"
           data-timeout="100"
-          data-html-allowed="true">
+          data-html-allowed="true"
+          data-pause-hover="true">
     Click me
     </span>
 
