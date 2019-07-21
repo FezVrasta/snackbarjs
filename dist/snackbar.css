@@ -3,6 +3,7 @@
   left: 20px;
   bottom: 0;
   z-index: 99999;
+  pointer-events: none;
 }
 .snackbar {
   overflow: hidden;
@@ -11,6 +12,7 @@
   max-width: 568px;
   cursor: pointer;
   opacity: 0;
+  pointer-events: all;
 }
 .snackbar.snackbar-opened {
   height: auto;
