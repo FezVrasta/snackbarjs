@@ -61,7 +61,7 @@
 
 			var snackbarNew = false;
 
-            options = Object.assign({}, $.snackbar.defaults, options)
+            options = Object.assign({}, $.snackbar.defaults, options);
 
             if (!isset(options.id)) {
                 options.id = "snackbar" + Date.now();
